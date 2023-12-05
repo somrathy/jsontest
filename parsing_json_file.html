@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Parsing json file</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+    <h3>Programming books</h3>
+    <script type="text/javascript">
+        $(document).ready(function){
+            $.getJSON("books.json", function(books){
+                $.each(books, function(key, value){
+                    $("p").append(" - "+value.language+", ");
+                    $("p").append(value.edition+" edition, ");
+                    $("p").append("<em>"+value.author+"</em></br>");
+                });
+            });
+        }z;
+    </script>
+    <p></p>
+</body>
+</html>
